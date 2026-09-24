@@ -1,0 +1,2202 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <Extensions />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VizExtensions.true...VizExtensions />
+    <_.fcp.VizExtensionsDupEncodingUUID.true...VizExtensionsDupEncodingUUID />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+        <calculation class='tableau' formula='&quot;all&quot;' />
+        <members>
+          <member value='&quot;all&quot;' />
+          <member value='&quot;bogo&quot;' />
+          <member value='&quot;discount&quot;' />
+          <member value='&quot;informational&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='starbucks_merged_real_final' inline='true' name='federated.0b9b8uj0ibf767143nyjj1xy1m4o' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='starbucks_merged_real_final' name='textscan.0rg1i280v535z50zt00oq1l5zg2t'>
+            <connection class='textscan' directory='C:/Users/user/Downloads' filename='starbucks_merged_real_final.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0rg1i280v535z50zt00oq1l5zg2t' name='starbucks_merged_real_final.csv' table='[starbucks_merged_real_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='person_id' ordinal='1' />
+            <column datatype='string' name='event' ordinal='2' />
+            <column datatype='real' name='amount' ordinal='3' />
+            <column datatype='string' name='offer_id' ordinal='4' />
+            <column datatype='real' name='reward' ordinal='5' />
+            <column datatype='integer' name='time' ordinal='6' />
+            <column datatype='real' name='diff_last_time' ordinal='7' />
+            <column datatype='integer' name='transaction_cnt' ordinal='8' />
+            <column datatype='real' name='total_amount' ordinal='9' />
+            <column datatype='integer' name='R_score' ordinal='10' />
+            <column datatype='integer' name='F_score' ordinal='11' />
+            <column datatype='integer' name='M_score' ordinal='12' />
+            <column datatype='integer' name='RFM_score' ordinal='13' />
+            <column datatype='string' name='RFM_group' ordinal='14' />
+            <column datatype='string' name='match_source' ordinal='15' />
+            <column datatype='real' name='viewed_time' ordinal='16' />
+            <column datatype='string' name='purchase_type' ordinal='17' />
+            <column datatype='real' name='promotion_reward' ordinal='18' />
+            <column datatype='real' name='web' ordinal='19' />
+            <column datatype='real' name='email' ordinal='20' />
+            <column datatype='real' name='mobile' ordinal='21' />
+            <column datatype='real' name='social' ordinal='22' />
+            <column datatype='real' name='difficulty' ordinal='23' />
+            <column datatype='real' name='duration' ordinal='24' />
+            <column datatype='string' name='offer_type' ordinal='25' />
+            <column datatype='string' name='promotion_id' ordinal='26' />
+            <column datatype='string' name='gender' ordinal='27' />
+            <column datatype='real' name='age' ordinal='28' />
+            <column datatype='real' name='became_member_on' ordinal='29' />
+            <column datatype='real' name='income' ordinal='30' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ko&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₩&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ko_KR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>person_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[person_id]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>person_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>event</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[event]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>event</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[amount]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>amount</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>offer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[offer_id]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>offer_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reward</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[reward]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>reward</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[time]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>time</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>diff_last_time</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[diff_last_time]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>diff_last_time</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transaction_cnt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[transaction_cnt]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>transaction_cnt</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_amount]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>total_amount</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[R_score]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>R_score</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F_score]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>F_score</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>M_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[M_score]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>M_score</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RFM_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[RFM_score]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>RFM_score</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RFM_group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RFM_group]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>RFM_group</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>match_source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[match_source]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>match_source</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>viewed_time</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[viewed_time]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>viewed_time</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>purchase_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[purchase_type]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>purchase_type</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>promotion_reward</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[promotion_reward]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>promotion_reward</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>web</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[web]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>web</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>email</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[email]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>email</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mobile</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mobile]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>mobile</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>social</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[social]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>social</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>difficulty</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[difficulty]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>difficulty</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>offer_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[offer_type]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>offer_type</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>promotion_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[promotion_id]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>promotion_id</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>became_member_on</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[became_member_on]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>became_member_on</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>income</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[income]</local-name>
+            <parent-name>[starbucks_merged_real_final.csv]</parent-name>
+            <remote-alias>income</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='C_info_리워드경고문구(복사본)' datatype='string' name='[C_info_리워드경고문구(복사본)_1197396638904344]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[매개 변수 1] = &apos;informational&apos; THEN &#13;&#10;    &apos;informational은 reward 금액이 0달러라&apos; + CHAR(10) + &apos;리워드 금액별 완료율을 계산할 수 없습니다.&apos; &#13;&#10;END' />
+      </column>
+      <column caption='C_선택 유형별(리워드금액별) conversion_rate' datatype='real' name='[C_선택 유형별 conversion_rate(복사본)_1197396628619286]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(&#13;&#10;    IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) &#13;&#10;    AND [offer_type] != &apos;informational&apos; &#13;&#10;    AND [event] = &apos;offer completed&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(&#13;&#10;    IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) &#13;&#10;    AND [offer_type] != &apos;informational&apos; &#13;&#10;    AND [event] = &apos;offer received&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)' />
+      </column>
+      <column caption='C_선택 유형별 실패율' datatype='real' name='[C_선택 유형별 conversion_rate(복사본)_1397782282760196]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1-(COUNT(&#13;&#10;    IF [offer_type] =  [Parameters].[매개 변수 1] THEN&#13;&#10;        IF ([offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos;)&#13;&#10;        OR ([offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos;)&#13;&#10;        THEN [offer_id]&#13;&#10;        END&#13;&#10;    END&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(&#13;&#10;    IF [offer_type] =  [Parameters].[매개 변수 1] AND [event] = &apos;offer received&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;))' />
+      </column>
+      <column caption='C_오퍼 수신(n)' datatype='integer' name='[C_오퍼 수신(복사본)_1572879032737808]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;-([Calculation_1572879028404236])' />
+      </column>
+      <column caption='C_오퍼 완료(n)' datatype='integer' name='[C_오퍼 완료(복사본)_1572879032913937]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='// [F3_오퍼 완료]&#13;&#10;-([Calculation_1572879028547598])' />
+      </column>
+      <column caption='C_오퍼 조회(n)' datatype='integer' name='[C_오퍼 조회(복사본)_1572879033008146]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='// [F2_오퍼 조회]&#13;&#10;-([Calculation_1572879028457485])' />
+      </column>
+      <column caption='C_전체 프로모션 실패률' datatype='real' name='[C_전체 프로모션 반응률(복사본)_1397782283366405]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1 - ((&#13;&#10;    COUNT(IF [offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos; THEN [offer_id] END)&#13;&#10;    +&#13;&#10;    COUNT(IF [offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos; THEN [offer_id] END)&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(IF [event] = &apos;offer received&apos; THEN [offer_id] END))' />
+      </column>
+      <column caption='C_프로모션유형별매출합계' datatype='real' name='[Calculation_1197396568133632]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(if [offer_type] = [Parameters].[매개 변수 1] then [amount] end)' />
+      </column>
+      <column caption='C_총프로모션기여매출' datatype='real' name='[Calculation_1197396569010177]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(if [purchase_type] &lt;&gt; &apos;organic&apos; then [amount] end)' />
+      </column>
+      <column caption='C_all_리워드금액합계' datatype='real' name='[Calculation_1197396570267650]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(if [offer_type] = &apos;bogo&apos; or  [offer_type] = &apos;discount&apos; then [reward] end)' />
+      </column>
+      <column caption='C_프로모션유형별리워드합계' datatype='real' name='[Calculation_1197396571865091]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[매개 변수 1] = &apos;all&apos; THEN NULL&#13;&#10;ELSEIF [Parameters].[매개 변수 1] = &apos;informational&apos; THEN 0&#13;&#10;ELSE SUM(IF [offer_type] = [Parameters].[매개 변수 1] THEN [reward] END)&#13;&#10;END' />
+      </column>
+      <column caption='C_총ROI' datatype='real' name='[Calculation_1197396573712389]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_1197396569010177] / [Calculation_1197396570267650])' />
+      </column>
+      <column caption='C_프로모션유형별ROI' datatype='real' name='[Calculation_1197396574306310]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_1197396568133632] / [Calculation_1197396571865091])' />
+      </column>
+      <column caption='C_info_리워드경고문구' datatype='string' name='[Calculation_1197396574646279]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[매개 변수 1] = &apos;informational&apos; THEN &#13;&#10;    &apos;informational은 reward 금액이 0달러라&apos; + CHAR(10) + &apos;ROI를 계산할 수 없습니다.&apos; &#13;&#10;END' />
+      </column>
+      <column caption='C_프로모션전체발송건수' datatype='integer' name='[Calculation_1197396576186376]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(IF [event] = &apos;offer received&apos; THEN [offer_id] END)' />
+      </column>
+      <column caption='C_프로모션유형별건수세기' datatype='integer' name='[Calculation_1197396579364873]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[매개 변수 1] = &apos;all&apos; THEN NULL&#13;&#10;ELSE &#13;&#10;    COUNT(IF [offer_type] = [Parameters].[매개 변수 1] AND [event] = &apos;offer received&apos; &#13;&#10;          THEN [offer_id] &#13;&#10;          END)&#13;&#10;END' />
+      </column>
+      <column caption='L_viewed_rate' datatype='real' name='[Calculation_1197396592033802]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF attr([Calculation_1572879034650643]) = &apos;2. viewed&apos; THEN max([Calculation_1572879056801814]) END' />
+      </column>
+      <column caption='C_offeridcount' datatype='integer' name='[Calculation_1197396602675213]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='count([offer_id])' />
+      </column>
+      <column caption='C_step1' datatype='string' name='[Calculation_1197396604854286]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='// Step 1: 오퍼가 실제로 유저에게 도달했는지 확인&#13;&#10;IF { FIXED [offer_id], [person_id] : MAX(IF [event] = &apos;offer received&apos; THEN 1 ELSE 0 END) } = 1 &#13;&#10;THEN &quot;1. 수신 성공&quot; &#13;&#10;ELSE &quot;1. 미수신(발송 실패/제외)&quot; &#13;&#10;END' />
+      </column>
+      <column caption='C_step2' datatype='string' name='[Calculation_1197396604903439]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='// 수신된 것 중 조회했는지, 안 했는지를 구분합니다.&#13;&#10;IF { FIXED [offer_id], [person_id] : MAX(IF [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) } = 1 &#13;&#10;THEN &quot;viewed&quot; &#13;&#10;ELSE &quot;out&quot; &#13;&#10;END' />
+      </column>
+      <column caption='C_step3' datatype='string' name='[Calculation_1197396605014032]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [offer_type] = &apos;informational&apos; THEN&#13;&#10;    // 정보성 오퍼: 조회(viewed)만 해도 성공으로 간주&#13;&#10;    IF { FIXED [offer_id], [person_id] : MAX(IF [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) } = 1 &#13;&#10;    THEN &quot;success&quot; &#13;&#10;    ELSE &quot;out&quot; &#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // 그 외 오퍼: 완료(completed)가 있어야 성공&#13;&#10;    IF { FIXED [offer_id], [person_id] : MAX(IF [event] = &apos;offer completed&apos; THEN 1 ELSE 0 END) } = 1 &#13;&#10;    THEN &quot;success&quot; &#13;&#10;    ELSE &quot;out&quot; &#13;&#10;    END&#13;&#10;END' />
+      </column>
+      <column caption='C_생키하이라이트' datatype='string' name='[Calculation_1197396609257489]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='// 매개변수가 &apos;all&apos;이면 모든 유효기간을 각각의 색으로 표시&#13;&#10;// 특정 유형(bogo 등)을 선택하면 그 유형만 유효기간 색을 유지하고 나머지는 회색 처리&#13;&#10;IF [Parameters].[매개 변수 1] = &apos;all&apos; THEN STR([duration])&#13;&#10;ELSEIF [offer_type] = [Parameters].[매개 변수 1] THEN STR([duration])&#13;&#10;ELSE &quot;기타 (비활성화)&quot;&#13;&#10;END' />
+      </column>
+      <column aggregation='Sum' caption='C_리워드전체적용' datatype='real' name='[Calculation_1197396617494546]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='// 오퍼 ID별로 가장 큰 리워드 값을 찾아서 모든 행에 뿌려줍니다.&#13;&#10;{ FIXED [offer_id] : MAX([reward]) }' />
+      </column>
+      <column caption='C_덤벨차트용completed' datatype='integer' name='[Calculation_1197396619075604]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(IF [event] = &apos;offer viewed&apos; THEN [offer_id] END)' />
+      </column>
+      <column caption='C_선택 유형별 conversion_rate' datatype='real' name='[Calculation_1572879019245578]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(&#13;&#10;    IF [offer_type] =  [Parameters].[매개 변수 1] THEN&#13;&#10;        IF ([offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos;)&#13;&#10;        OR ([offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos;)&#13;&#10;        THEN [offer_id]&#13;&#10;        END&#13;&#10;    END&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(&#13;&#10;    IF [offer_type] = [Parameters].[매개 변수 1] AND [event] = &apos;offer received&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)' />
+      </column>
+      <column caption='C_오퍼 수신' datatype='integer' name='[Calculation_1572879028404236]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;count(if (([Parameters].[매개 변수 1] = &apos;all&apos;) OR ([offer_type] = [Parameters].[매개 변수 1])) and [event] = &apos;offer received&apos; then [offer_id] end)' />
+      </column>
+      <column caption='C_오퍼 조회' datatype='integer' name='[Calculation_1572879028457485]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;count(if (([Parameters].[매개 변수 1] = &apos;all&apos;) OR ([offer_type] = [Parameters].[매개 변수 1])) and [event] = &apos;offer viewed&apos; then [offer_id] end)' />
+      </column>
+      <column caption='C_오퍼 완료' datatype='integer' name='[Calculation_1572879028547598]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;count(if (([Parameters].[매개 변수 1] = &apos;all&apos;) OR ([offer_type] = [Parameters].[매개 변수 1])) and [event] = &apos;offer completed&apos; then [offer_id] end)' />
+      </column>
+      <column caption='C_퍼널만들기' datatype='string' name='[Calculation_1572879034650643]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if ([Parameters].[매개 변수 1]= &apos;all&apos;) or [offer_type]=  [Parameters].[매개 변수 1] then&#13;&#10;    if [event] = &apos;offer received&apos; then &apos;1. received&apos;&#13;&#10;    elseif [event] = &apos;offer viewed&apos; then &apos;2. viewed&apos;&#13;&#10;    elseif [event] = &apos;offer completed&apos; then &apos;3. completed&apos;&#13;&#10;    end&#13;&#10;end' />
+      </column>
+      <column caption='C_view_rate' datatype='real' name='[Calculation_1572879056801814]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) }&#13;&#10;/&#13;&#10;{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer received&apos; THEN 1 ELSE 0 END) }' />
+      </column>
+      <column caption='C_complete_rate' datatype='real' name='[Calculation_1572879057121303]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer completed&apos; THEN 1 ELSE 0 END) }&#13;&#10;/&#13;&#10;{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) }' />
+      </column>
+      <column caption='C_전체 프로모션 반응률' datatype='real' name='[Calculation_1742203530006530 1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(&#13;&#10;    COUNT(IF [offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos; THEN [offer_id] END)&#13;&#10;    +&#13;&#10;    COUNT(IF [offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos; THEN [offer_id] END)&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(IF [event] = &apos;offer received&apos; THEN [offer_id] END)' />
+      </column>
+      <column caption='C_전체목표달성률' datatype='real' name='[Calculation_1742203530006530]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(&#13;&#10;    COUNT(IF [offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos; THEN [offer_id] END)&#13;&#10;    +&#13;&#10;    COUNT(IF [offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos; THEN [offer_id] END)&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(IF [event] = &apos;offer received&apos; THEN [offer_id] END)' />
+      </column>
+      <column caption='F score' datatype='integer' name='[F_score]' role='measure' type='quantitative' />
+      <column caption='L_completed_rate' datatype='real' name='[L_viewed_rate(복사본)_1197396592746507]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF attr([Calculation_1572879034650643]) = &apos;3. completed&apos; THEN  max([Calculation_1572879057121303]) END' />
+      </column>
+      <column caption='M score' datatype='integer' name='[M_score]' role='measure' type='quantitative' />
+      <column caption='RFM group' datatype='string' name='[RFM_group]' role='dimension' type='nominal' />
+      <column caption='RFM score' datatype='integer' name='[RFM_score]' role='measure' type='quantitative' />
+      <column caption='R score' datatype='integer' name='[R_score]' role='measure' type='quantitative' />
+      <column caption='starbucks_merged_real_final.csv' datatype='table' name='[__tableau_internal_object_id__].[starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='real' name='[age]' role='measure' type='quantitative' />
+      <column caption='Amount' datatype='real' name='[amount]' role='measure' type='quantitative' />
+      <column caption='Became Member On' datatype='real' name='[became_member_on]' role='measure' type='quantitative' />
+      <column caption='Diff Last Time' datatype='real' name='[diff_last_time]' role='measure' type='quantitative' />
+      <column caption='Difficulty' datatype='real' name='[difficulty]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Duration' datatype='real' name='[duration]' role='dimension' type='ordinal' />
+      <column caption='Email' datatype='real' name='[email]' role='measure' type='quantitative' />
+      <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Income' datatype='real' name='[income]' role='measure' type='quantitative' />
+      <column caption='Match Source' datatype='string' name='[match_source]' role='dimension' type='nominal' />
+      <column caption='Mobile' datatype='real' name='[mobile]' role='measure' type='quantitative' />
+      <column caption='Offer Id' datatype='string' name='[offer_id]' role='dimension' type='nominal' />
+      <column caption='Offer Type' datatype='string' name='[offer_type]' role='dimension' type='nominal' />
+      <column caption='Person Id' datatype='string' name='[person_id]' role='dimension' type='nominal' />
+      <column caption='Promotion Id' datatype='string' name='[promotion_id]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Promotion Reward' datatype='real' name='[promotion_reward]' role='dimension' type='ordinal' />
+      <column caption='Purchase Type' datatype='string' name='[purchase_type]' role='dimension' type='nominal' />
+      <column caption='Reward' datatype='real' name='[reward]' role='measure' type='quantitative' />
+      <column caption='Social' datatype='real' name='[social]' role='measure' type='quantitative' />
+      <column caption='Time' datatype='integer' name='[time]' role='measure' type='quantitative' />
+      <column caption='Total Amount' datatype='real' name='[total_amount]' role='measure' type='quantitative' />
+      <column caption='Transaction Cnt' datatype='integer' name='[transaction_cnt]' role='measure' type='quantitative' />
+      <column caption='Viewed Time' datatype='real' name='[viewed_time]' role='measure' type='quantitative' />
+      <column caption='Web' datatype='real' name='[web]' role='measure' type='quantitative' />
+      <column-instance column='[difficulty]' derivation='None' name='[none:difficulty:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[offer_type]' derivation='None' name='[none:offer_type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[promotion_reward]' derivation='None' name='[none:promotion_reward:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[amount]' derivation='Sum' name='[sum:amount:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[difficulty]' derivation='Sum' name='[sum:difficulty:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[duration]' derivation='Sum' name='[sum:duration:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[email]' derivation='Sum' name='[sum:email:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[income]' derivation='Sum' name='[sum:income:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mobile]' derivation='Sum' name='[sum:mobile:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[promotion_reward]' derivation='Sum' name='[sum:promotion_reward:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[reward]' derivation='Sum' name='[sum:reward:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[social]' derivation='Sum' name='[sum:social:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[web]' derivation='Sum' name='[sum:web:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[C_오퍼 수신(복사본)_1572879032737808]' derivation='User' name='[usr:C_오퍼 수신(복사본)_1572879032737808:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[C_오퍼 완료(복사본)_1572879032913937]' derivation='User' name='[usr:C_오퍼 완료(복사본)_1572879032913937:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[C_오퍼 조회(복사본)_1572879033008146]' derivation='User' name='[usr:C_오퍼 조회(복사본)_1572879033008146:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1197396619075604]' derivation='User' name='[usr:Calculation_1197396619075604:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1572879019245578]' derivation='User' name='[usr:Calculation_1572879019245578:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1572879028404236]' derivation='User' name='[usr:Calculation_1572879028404236:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1572879028457485]' derivation='User' name='[usr:Calculation_1572879028457485:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1572879028547598]' derivation='User' name='[usr:Calculation_1572879028547598:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1742203530006530]' derivation='User' name='[usr:Calculation_1742203530006530:qk]' pivot='key' type='quantitative' />
+      <layout common-percentage='0.958702' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.0412979' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#2c5985'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 완료(복사본)_1572879032913937:qk]&quot;</bucket>
+            </map>
+            <map to='#2c5985'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028547598:qk]&quot;</bucket>
+            </map>
+            <map to='#419eb6'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 조회(복사본)_1572879033008146:qk]&quot;</bucket>
+            </map>
+            <map to='#419eb6'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028457485:qk]&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[__tableau_internal_object_id__].[cnt:promotion.csv_EA314976413C403593BBB56467A7ED5A:qk]&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879019245578:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:duration:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396618993683:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203531309059:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:age:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203530006530:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:amount:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572878999875586:qk]&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 수신(복사본)_1572879032737808:qk]&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028404236:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203531395076:qk]&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:social:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879024680971:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:email:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[__tableau_internal_object_id__].[cnt:customer.csv_3BE0D4C26E7D44C3A0446361EF224782:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572878997889025:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:income:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879013535753:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:promotion_reward:qk]&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:mobile:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:difficulty:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:difficulty:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:reward:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879011094536:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[__tableau_internal_object_id__].[cnt:event_log.csv_8C9DE55072614841B46BEDB82156F2F8:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879000317956:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396619075604:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203529932801:qk]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:web:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[sum:log_amount:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572878999875586 1:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203529187328:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1197396619550741:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Others&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;informational&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;discount&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;bogo&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:offer_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;discount&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;bogo&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+          <calculation class='tableau' formula='&quot;all&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='starbucks_merged_real_final.csv' id='starbucks_merged_real_final.csv_5132D74C75774DD9AC882669A32A6604'>
+            <properties context=''>
+              <relation connection='textscan.0rg1i280v535z50zt00oq1l5zg2t' name='starbucks_merged_real_final.csv' table='[starbucks_merged_real_final#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='person_id' ordinal='1' />
+                  <column datatype='string' name='event' ordinal='2' />
+                  <column datatype='real' name='amount' ordinal='3' />
+                  <column datatype='string' name='offer_id' ordinal='4' />
+                  <column datatype='real' name='reward' ordinal='5' />
+                  <column datatype='integer' name='time' ordinal='6' />
+                  <column datatype='real' name='diff_last_time' ordinal='7' />
+                  <column datatype='integer' name='transaction_cnt' ordinal='8' />
+                  <column datatype='real' name='total_amount' ordinal='9' />
+                  <column datatype='integer' name='R_score' ordinal='10' />
+                  <column datatype='integer' name='F_score' ordinal='11' />
+                  <column datatype='integer' name='M_score' ordinal='12' />
+                  <column datatype='integer' name='RFM_score' ordinal='13' />
+                  <column datatype='string' name='RFM_group' ordinal='14' />
+                  <column datatype='string' name='match_source' ordinal='15' />
+                  <column datatype='real' name='viewed_time' ordinal='16' />
+                  <column datatype='string' name='purchase_type' ordinal='17' />
+                  <column datatype='real' name='promotion_reward' ordinal='18' />
+                  <column datatype='real' name='web' ordinal='19' />
+                  <column datatype='real' name='email' ordinal='20' />
+                  <column datatype='real' name='mobile' ordinal='21' />
+                  <column datatype='real' name='social' ordinal='22' />
+                  <column datatype='real' name='difficulty' ordinal='23' />
+                  <column datatype='real' name='duration' ordinal='24' />
+                  <column datatype='string' name='offer_type' ordinal='25' />
+                  <column datatype='string' name='promotion_id' ordinal='26' />
+                  <column datatype='string' name='gender' ordinal='27' />
+                  <column datatype='real' name='age' ordinal='28' />
+                  <column datatype='real' name='became_member_on' ordinal='29' />
+                  <column datatype='real' name='income' ordinal='30' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='리워드금액별완료율'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='starbucks_merged_real_final' name='federated.0b9b8uj0ibf767143nyjj1xy1m4o' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+              <calculation class='tableau' formula='&quot;all&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0b9b8uj0ibf767143nyjj1xy1m4o'>
+            <column caption='C_선택 유형별(리워드금액별) conversion_rate' datatype='real' name='[C_선택 유형별 conversion_rate(복사본)_1197396628619286]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(&#13;&#10;    IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) &#13;&#10;    AND [offer_type] != &apos;informational&apos; &#13;&#10;    AND [event] = &apos;offer completed&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(&#13;&#10;    IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) &#13;&#10;    AND [offer_type] != &apos;informational&apos; &#13;&#10;    AND [event] = &apos;offer received&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)' />
+            </column>
+            <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column-instance column='[promotion_reward]' derivation='None' name='[none:promotion_reward:qk]' pivot='key' type='quantitative' />
+            <column caption='Offer Id' datatype='string' name='[offer_id]' role='dimension' type='nominal' />
+            <column caption='Offer Type' datatype='string' name='[offer_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Promotion Reward' datatype='real' name='[promotion_reward]' role='dimension' type='ordinal' />
+            <column-instance column='[C_선택 유형별 conversion_rate(복사본)_1197396628619286]' derivation='User' name='[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]' value='65' />
+            <format attr='display' class='0' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]' value='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]' value='c&quot;₩&quot;#,##0;-&quot;₩&quot;#,##0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Noto Sans KR' fontsize='11'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run fontcolor='#00592d' fontname='Noto Sans KR' fontsize='14'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]</rows>
+        <cols>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]</cols>
+      </table>
+      <simple-id uuid='{6CEA3236-5DCC-43C2-AEF5-03C29D3F842B}' />
+    </worksheet>
+    <worksheet name='목표 달성률_이게진짜'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='starbucks_merged_real_final' name='federated.0b9b8uj0ibf767143nyjj1xy1m4o' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+              <calculation class='tableau' formula='&quot;all&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0b9b8uj0ibf767143nyjj1xy1m4o'>
+            <column caption='C_선택 유형별 실패율' datatype='real' name='[C_선택 유형별 conversion_rate(복사본)_1397782282760196]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1-(COUNT(&#13;&#10;    IF [offer_type] =  [Parameters].[매개 변수 1] THEN&#13;&#10;        IF ([offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos;)&#13;&#10;        OR ([offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos;)&#13;&#10;        THEN [offer_id]&#13;&#10;        END&#13;&#10;    END&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(&#13;&#10;    IF [offer_type] =  [Parameters].[매개 변수 1] AND [event] = &apos;offer received&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;))' />
+            </column>
+            <column caption='C_전체 프로모션 실패률' datatype='real' name='[C_전체 프로모션 반응률(복사본)_1397782283366405]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1 - ((&#13;&#10;    COUNT(IF [offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos; THEN [offer_id] END)&#13;&#10;    +&#13;&#10;    COUNT(IF [offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos; THEN [offer_id] END)&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(IF [event] = &apos;offer received&apos; THEN [offer_id] END))' />
+            </column>
+            <column caption='C_선택 유형별 conversion_rate' datatype='real' name='[Calculation_1572879019245578]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(&#13;&#10;    IF [offer_type] =  [Parameters].[매개 변수 1] THEN&#13;&#10;        IF ([offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos;)&#13;&#10;        OR ([offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos;)&#13;&#10;        THEN [offer_id]&#13;&#10;        END&#13;&#10;    END&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(&#13;&#10;    IF [offer_type] = [Parameters].[매개 변수 1] AND [event] = &apos;offer received&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)' />
+            </column>
+            <column caption='C_전체 프로모션 반응률' datatype='real' name='[Calculation_1742203530006530 1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(&#13;&#10;    COUNT(IF [offer_type] = &apos;informational&apos; AND [event] = &apos;offer viewed&apos; THEN [offer_id] END)&#13;&#10;    +&#13;&#10;    COUNT(IF [offer_type] != &apos;informational&apos; AND [event] = &apos;offer completed&apos; THEN [offer_id] END)&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(IF [event] = &apos;offer received&apos; THEN [offer_id] END)' />
+            </column>
+            <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column caption='Offer Id' datatype='string' name='[offer_id]' role='dimension' type='nominal' />
+            <column caption='Offer Type' datatype='string' name='[offer_type]' role='dimension' type='nominal' />
+            <column-instance column='[C_선택 유형별 conversion_rate(복사본)_1397782282760196]' derivation='User' name='[usr:C_선택 유형별 conversion_rate(복사본)_1397782282760196:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[C_전체 프로모션 반응률(복사본)_1397782283366405]' derivation='User' name='[usr:C_전체 프로모션 반응률(복사본)_1397782283366405:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1572879019245578]' derivation='User' name='[usr:Calculation_1572879019245578:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1742203530006530 1]' derivation='User' name='[usr:Calculation_1742203530006530 1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203530006530 1:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879019245578:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1397782282760196:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_전체 프로모션 반응률(복사본)_1397782283366405:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203530006530 1:qk]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879019245578:qk]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1397782282760196:qk]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_전체 프로모션 반응률(복사본)_1397782283366405:qk]' />
+              <text column='[Parameters].[매개 변수 1]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#898989' fontname='Noto Sans KR' fontsize='11'> 목표달성률                                         실패율</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#00592d' fontname='Noto Sans KR' fontsize='26'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1742203530006530 1:qk]>]]></run>
+                <run fontname='Noto Sans KR' fontsize='26'>Æ     </run>
+                <run fontcolor='#aa0000' fontname='Noto Sans KR' fontsize='26'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_전체 프로모션 반응률(복사본)_1397782283366405:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#d4d4d4' fontname='Noto Sans KR' fontsize='28'>─────────────</run>
+                <run>Æ&#10;</run>
+                <run fontname='Noto Sans KR' fontsize='26'>&lt;[Parameters].[매개 변수 1]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#b4b4b4' fontname='Noto Sans KR' fontsize='26'>Æ </run>
+                <run fontcolor='#00592d' fontname='Noto Sans KR' fontsize='26'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879019245578:qk]>]]></run>
+                <run fontname='Noto Sans KR' fontsize='26'>Æ     </run>
+                <run fontcolor='#aa0000' fontname='Noto Sans KR' fontsize='26'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1397782282760196:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{122F23E6-1390-4CC7-BD74-FEFC6F2FC40C}' />
+    </worksheet>
+    <worksheet name='오퍼유효기간별 퍼널'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='starbucks_merged_real_final' name='federated.0b9b8uj0ibf767143nyjj1xy1m4o' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+              <calculation class='tableau' formula='&quot;all&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0b9b8uj0ibf767143nyjj1xy1m4o'>
+            <column caption='C_offeridcount' datatype='integer' name='[Calculation_1197396602675213]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='count([offer_id])' />
+            </column>
+            <column caption='C_step2' datatype='string' name='[Calculation_1197396604903439]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='// 수신된 것 중 조회했는지, 안 했는지를 구분합니다.&#13;&#10;IF { FIXED [offer_id], [person_id] : MAX(IF [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) } = 1 &#13;&#10;THEN &quot;viewed&quot; &#13;&#10;ELSE &quot;out&quot; &#13;&#10;END' />
+            </column>
+            <column caption='C_step3' datatype='string' name='[Calculation_1197396605014032]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [offer_type] = &apos;informational&apos; THEN&#13;&#10;    // 정보성 오퍼: 조회(viewed)만 해도 성공으로 간주&#13;&#10;    IF { FIXED [offer_id], [person_id] : MAX(IF [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) } = 1 &#13;&#10;    THEN &quot;success&quot; &#13;&#10;    ELSE &quot;out&quot; &#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // 그 외 오퍼: 완료(completed)가 있어야 성공&#13;&#10;    IF { FIXED [offer_id], [person_id] : MAX(IF [event] = &apos;offer completed&apos; THEN 1 ELSE 0 END) } = 1 &#13;&#10;    THEN &quot;success&quot; &#13;&#10;    ELSE &quot;out&quot; &#13;&#10;    END&#13;&#10;END' />
+            </column>
+            <column caption='C_생키하이라이트' datatype='string' name='[Calculation_1197396609257489]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='// 매개변수가 &apos;all&apos;이면 모든 유효기간을 각각의 색으로 표시&#13;&#10;// 특정 유형(bogo 등)을 선택하면 그 유형만 유효기간 색을 유지하고 나머지는 회색 처리&#13;&#10;IF [Parameters].[매개 변수 1] = &apos;all&apos; THEN STR([duration])&#13;&#10;ELSEIF [offer_type] = [Parameters].[매개 변수 1] THEN STR([duration])&#13;&#10;ELSE &quot;기타 (비활성화)&quot;&#13;&#10;END' />
+            </column>
+            <column caption='C_퍼널만들기' datatype='string' name='[Calculation_1572879034650643]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if ([Parameters].[매개 변수 1]= &apos;all&apos;) or [offer_type]=  [Parameters].[매개 변수 1] then&#13;&#10;    if [event] = &apos;offer received&apos; then &apos;1. received&apos;&#13;&#10;    elseif [event] = &apos;offer viewed&apos; then &apos;2. viewed&apos;&#13;&#10;    elseif [event] = &apos;offer completed&apos; then &apos;3. completed&apos;&#13;&#10;    end&#13;&#10;end' />
+            </column>
+            <column aggregation='Sum' caption='Duration' datatype='real' name='[duration]' role='dimension' type='ordinal' />
+            <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1197396604903439]' derivation='None' name='[none:Calculation_1197396604903439:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1197396605014032]' derivation='None' name='[none:Calculation_1197396605014032:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1197396609257489]' derivation='None' name='[none:Calculation_1197396609257489:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1572879034650643]' derivation='None' name='[none:Calculation_1572879034650643:nk]' pivot='key' type='nominal' />
+            <column-instance column='[duration]' derivation='None' name='[none:duration:ok]' pivot='key' type='ordinal' />
+            <column caption='Offer Id' datatype='string' name='[offer_id]' role='dimension' type='nominal' />
+            <column caption='Offer Type' datatype='string' name='[offer_type]' role='dimension' type='nominal' />
+            <column caption='Person Id' datatype='string' name='[person_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1197396602675213]' derivation='User' name='[usr:Calculation_1197396602675213:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_1572879034650643:nk]' member='&quot;1. received&quot;' />
+              <groupfilter function='member' level='[none:Calculation_1572879034650643:nk]' member='&quot;2. viewed&quot;' />
+              <groupfilter function='member' level='[none:Calculation_1572879034650643:nk]' member='&quot;3. completed&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.tableau.extension.sankey' extension-url='https://extensions.tableauusercontent.com/sandbox/sankey/sankey.html' extension-version='1.5.0' instance-id='35A56DD5B2F54BF29DF90FA031362C5C'>
+              <instance-settings>
+                <setting key='align-edges' value='true' />
+                <setting key='color-map' value='{&quot;C_step2&quot;:[[&quot;2. 조회 안 함(이탈)&quot;,&quot;#b07aa1&quot;],[&quot;2. 조회함&quot;,&quot;#ff9da7&quot;],[&quot;2. 이탈&quot;,&quot;#e15759&quot;],[&quot;이탈&quot;,&quot;#b07aa1&quot;],[&quot;viewed&quot;,&quot;#ff9da7&quot;],[&quot;조회&quot;,&quot;#ff9da7&quot;],[&quot;out&quot;,&quot;#b07aa1&quot;]],&quot;C_step3&quot;:[[&quot;3. 완료 안 함(이탈)&quot;,&quot;#9c755f&quot;],[&quot;3. 완료함&quot;,&quot;#bab0ac&quot;],[&quot;3. 이탈&quot;,&quot;#59a14f&quot;],[&quot;3. 성공(목표 달성)&quot;,&quot;#9c755f&quot;],[&quot;이탈&quot;,&quot;#9c755f&quot;],[&quot;목표 달성&quot;,&quot;#bab0ac&quot;],[&quot;out&quot;,&quot;#ff9da7&quot;],[&quot;success&quot;,&quot;#9c755f&quot;]],&quot;C_생키하이라이트&quot;:[[&quot;3&quot;,&quot;#edc948&quot;],[&quot;4&quot;,&quot;#4e79a7&quot;],[&quot;5&quot;,&quot;#f28e2b&quot;],[&quot;7&quot;,&quot;#e15759&quot;],[&quot;10&quot;,&quot;#76b7b2&quot;]]}' />
+                <setting key='color-palette' value='tableau10' />
+                <setting key='ignore-nulls' value='true' />
+                <setting key='level-labels-font' value='{&quot;size&quot;:&quot;11pt&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;family&quot;:&quot;Verdana&quot;,&quot;isBold&quot;:false,&quot;isItalic&quot;:false,&quot;isUnderlined&quot;:false}' />
+                <setting key='show-level-labels' value='true' />
+                <setting key='show-top-labels' value='false' />
+              </instance-settings>
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{6CDBDE1E-354C-4079-849D-D6ADFCE6A869}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396609257489:nk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{6CDBDE1E-354C-4079-849D-D6ADFCE6A869}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396609257489:nk]' custom-type-name='level' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{B1423DC0-7543-4D32-B0B8-E463DD3862C1}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396604903439:nk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{B1423DC0-7543-4D32-B0B8-E463DD3862C1}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396604903439:nk]' custom-type-name='level' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{B2E11241-071A-4984-A3C0-FD8836D4C10B}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396605014032:nk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{B2E11241-071A-4984-A3C0-FD8836D4C10B}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396605014032:nk]' custom-type-name='level' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{E454C542-6F43-47E2-802B-982AE7904CFC}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396602675213:qk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{E454C542-6F43-47E2-802B-982AE7904CFC}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396602675213:qk]' custom-type-name='edge' />
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{F0421744-CACF-4FB3-9B22-0E0DB22133FD}' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:duration:ok]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>C_step2:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396604903439:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>C_step3:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396605014032:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>C_생키하이라이트:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396609257489:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Duration:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:duration:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>C_offeridcount:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396602675213:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'>informational은 offer_completed가 존재하지 않기 때문에 viewed를 목표 달성으로 보았습니다.</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{630641E4-33AE-4544-A2DE-714B81DA1C6C}' />
+    </worksheet>
+    <worksheet name='전체 - 오퍼유형별 퍼널'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='starbucks_merged_real_final' name='federated.0b9b8uj0ibf767143nyjj1xy1m4o' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+              <calculation class='tableau' formula='&quot;all&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0b9b8uj0ibf767143nyjj1xy1m4o'>
+            <column caption='C_오퍼 수신(n)' datatype='integer' name='[C_오퍼 수신(복사본)_1572879032737808]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;-([Calculation_1572879028404236])' />
+            </column>
+            <column caption='C_오퍼 완료(n)' datatype='integer' name='[C_오퍼 완료(복사본)_1572879032913937]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='// [F3_오퍼 완료]&#13;&#10;-([Calculation_1572879028547598])' />
+            </column>
+            <column caption='C_오퍼 조회(n)' datatype='integer' name='[C_오퍼 조회(복사본)_1572879033008146]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='// [F2_오퍼 조회]&#13;&#10;-([Calculation_1572879028457485])' />
+            </column>
+            <column caption='L_viewed_rate' datatype='real' name='[Calculation_1197396592033802]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF attr([Calculation_1572879034650643]) = &apos;2. viewed&apos; THEN max([Calculation_1572879056801814]) END' />
+            </column>
+            <column caption='C_오퍼 수신' datatype='integer' name='[Calculation_1572879028404236]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;count(if (([Parameters].[매개 변수 1] = &apos;all&apos;) OR ([offer_type] = [Parameters].[매개 변수 1])) and [event] = &apos;offer received&apos; then [offer_id] end)' />
+            </column>
+            <column caption='C_오퍼 조회' datatype='integer' name='[Calculation_1572879028457485]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;count(if (([Parameters].[매개 변수 1] = &apos;all&apos;) OR ([offer_type] = [Parameters].[매개 변수 1])) and [event] = &apos;offer viewed&apos; then [offer_id] end)' />
+            </column>
+            <column caption='C_오퍼 완료' datatype='integer' name='[Calculation_1572879028547598]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='// [F1_오퍼 수신]&#13;&#10;count(if (([Parameters].[매개 변수 1] = &apos;all&apos;) OR ([offer_type] = [Parameters].[매개 변수 1])) and [event] = &apos;offer completed&apos; then [offer_id] end)' />
+            </column>
+            <column caption='C_퍼널만들기' datatype='string' name='[Calculation_1572879034650643]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if ([Parameters].[매개 변수 1]= &apos;all&apos;) or [offer_type]=  [Parameters].[매개 변수 1] then&#13;&#10;    if [event] = &apos;offer received&apos; then &apos;1. received&apos;&#13;&#10;    elseif [event] = &apos;offer viewed&apos; then &apos;2. viewed&apos;&#13;&#10;    elseif [event] = &apos;offer completed&apos; then &apos;3. completed&apos;&#13;&#10;    end&#13;&#10;end' />
+            </column>
+            <column caption='C_view_rate' datatype='real' name='[Calculation_1572879056801814]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) }&#13;&#10;/&#13;&#10;{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer received&apos; THEN 1 ELSE 0 END) }' />
+            </column>
+            <column caption='C_complete_rate' datatype='real' name='[Calculation_1572879057121303]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer completed&apos; THEN 1 ELSE 0 END) }&#13;&#10;/&#13;&#10;{ SUM(IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) AND [event] = &apos;offer viewed&apos; THEN 1 ELSE 0 END) }' />
+            </column>
+            <column caption='L_completed_rate' datatype='real' name='[L_viewed_rate(복사본)_1197396592746507]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF attr([Calculation_1572879034650643]) = &apos;3. completed&apos; THEN  max([Calculation_1572879057121303]) END' />
+            </column>
+            <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1572879034650643]' derivation='None' name='[none:Calculation_1572879034650643:nk]' pivot='key' type='nominal' />
+            <column caption='Offer Id' datatype='string' name='[offer_id]' role='dimension' type='nominal' />
+            <column caption='Offer Type' datatype='string' name='[offer_type]' role='dimension' type='nominal' />
+            <column-instance column='[C_오퍼 수신(복사본)_1572879032737808]' derivation='User' name='[usr:C_오퍼 수신(복사본)_1572879032737808:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[C_오퍼 완료(복사본)_1572879032913937]' derivation='User' name='[usr:C_오퍼 완료(복사본)_1572879032913937:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[C_오퍼 조회(복사본)_1572879033008146]' derivation='User' name='[usr:C_오퍼 조회(복사본)_1572879033008146:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1197396592033802]' derivation='User' name='[usr:Calculation_1197396592033802:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1572879028404236]' derivation='User' name='[usr:Calculation_1572879028404236:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1572879028457485]' derivation='User' name='[usr:Calculation_1572879028457485:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1572879028547598]' derivation='User' name='[usr:Calculation_1572879028547598:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[L_viewed_rate(복사본)_1197396592746507]' derivation='User' name='[usr:L_viewed_rate(복사본)_1197396592746507:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028404236:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 수신(복사본)_1572879032737808:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028457485:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 조회(복사본)_1572879033008146:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028547598:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 완료(복사본)_1572879032913937:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028404236:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 수신(복사본)_1572879032737808:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028457485:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 조회(복사본)_1572879033008146:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1572879028547598:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_오퍼 완료(복사본)_1572879032913937:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_1572879034650643:nk]' member='&quot;1. received&quot;' />
+              <groupfilter function='member' level='[none:Calculation_1572879034650643:nk]' member='&quot;2. viewed&quot;' />
+              <groupfilter function='member' level='[none:Calculation_1572879034650643:nk]' member='&quot;3. completed&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[:Measure Names]</column>
+            <column>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[Multiple Values]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[Multiple Values]' value='*0;0' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396592033802:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:L_viewed_rate(복사본)_1197396592746507:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[:Measure Names]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[Multiple Values]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396592033802:qk]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:L_viewed_rate(복사본)_1197396592746507:qk]' />
+              <lod column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#000000'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[Multiple Values]>건]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run fontcolor='#000000'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396592033802:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:L_viewed_rate(복사본)_1197396592746507:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-family' value='Noto Sans KR Black' />
+                <format attr='font-size' value='14' />
+                <format attr='color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-transparency' value='132' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]</rows>
+        <cols>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{ECE43644-E3A1-4BCC-95AC-F0C8E560E652}' />
+    </worksheet>
+    <worksheet name='최저금액별완료율'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='starbucks_merged_real_final' name='federated.0b9b8uj0ibf767143nyjj1xy1m4o' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+              <calculation class='tableau' formula='&quot;all&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0b9b8uj0ibf767143nyjj1xy1m4o'>
+            <column caption='C_선택 유형별(리워드금액별) conversion_rate' datatype='real' name='[C_선택 유형별 conversion_rate(복사본)_1197396628619286]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(&#13;&#10;    IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) &#13;&#10;    AND [offer_type] != &apos;informational&apos; &#13;&#10;    AND [event] = &apos;offer completed&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)&#13;&#10;/&#13;&#10;COUNT(&#13;&#10;    IF ([Parameters].[매개 변수 1] = &apos;all&apos; OR [offer_type] = [Parameters].[매개 변수 1]) &#13;&#10;    AND [offer_type] != &apos;informational&apos; &#13;&#10;    AND [event] = &apos;offer received&apos; &#13;&#10;    THEN [offer_id] &#13;&#10;    END&#13;&#10;)' />
+            </column>
+            <column caption='Difficulty' datatype='real' name='[difficulty]' role='measure' type='quantitative' />
+            <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column-instance column='[difficulty]' derivation='None' name='[none:difficulty:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[offer_type]' derivation='None' name='[none:offer_type:nk]' pivot='key' type='nominal' />
+            <column caption='Offer Id' datatype='string' name='[offer_id]' role='dimension' type='nominal' />
+            <column caption='Offer Type' datatype='string' name='[offer_type]' role='dimension' type='nominal' />
+            <column-instance column='[C_선택 유형별 conversion_rate(복사본)_1197396628619286]' derivation='User' name='[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:difficulty:qk]' value='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:offer_type:nk]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:difficulty:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run>informational은 최저구매금액이 존재하지 않습니다.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Noto Sans KR' fontsize='11'>&lt;</run>
+                <run fontname='Noto Sans KR' fontsize='11'>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:difficulty:qk]</run>
+                <run fontname='Noto Sans KR' fontsize='11'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:C_선택 유형별 conversion_rate(복사본)_1197396628619286:qk]</rows>
+        <cols>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:difficulty:qk]</cols>
+      </table>
+      <simple-id uuid='{00D4D3DE-C7DA-4A71-A68B-3ACFD2D5A02D}' />
+    </worksheet>
+    <worksheet name='프로모션발생건수'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='starbucks_merged_real_final' name='federated.0b9b8uj0ibf767143nyjj1xy1m4o' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='P_프로모션유형' datatype='string' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;all&quot;'>
+              <calculation class='tableau' formula='&quot;all&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0b9b8uj0ibf767143nyjj1xy1m4o'>
+            <column caption='C_프로모션전체발송건수' datatype='integer' name='[Calculation_1197396576186376]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(IF [event] = &apos;offer received&apos; THEN [offer_id] END)' />
+            </column>
+            <column caption='C_프로모션유형별건수세기' datatype='integer' name='[Calculation_1197396579364873]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[매개 변수 1] = &apos;all&apos; THEN NULL&#13;&#10;ELSE &#13;&#10;    COUNT(IF [offer_type] = [Parameters].[매개 변수 1] AND [event] = &apos;offer received&apos; &#13;&#10;          THEN [offer_id] &#13;&#10;          END)&#13;&#10;END' />
+            </column>
+            <column caption='Event' datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column caption='Offer Id' datatype='string' name='[offer_id]' role='dimension' type='nominal' />
+            <column caption='Offer Type' datatype='string' name='[offer_type]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1197396576186376]' derivation='User' name='[usr:Calculation_1197396576186376:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1197396579364873]' derivation='User' name='[usr:Calculation_1197396579364873:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396576186376:qk]' value='n#,##0&quot;건&quot;;-#,##0&quot;건&quot;' />
+            <format attr='text-format' field='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396579364873:qk]' value='n#,##0&quot;건&quot;;-#,##0&quot;건&quot;' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396576186376:qk]' />
+              <text column='[Parameters].[매개 변수 1]' />
+              <text column='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396579364873:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#898989' fontname='Noto Sans KR' fontsize='11'>총 프로모션 제공 건수</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#00592d' fontname='Noto Sans KR' fontsize='26'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396576186376:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#d4d4d4' fontname='Malgun Gothic' fontsize='28'>─────────────</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#898989' fontname='Noto Sans KR' fontsize='14'>&lt;[Parameters].[매개 변수 1]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#00592d' fontname='Noto Sans KR' fontsize='18'><![CDATA[<[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[usr:Calculation_1197396579364873:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5D066ED8-E09D-4D95-B9FB-63CA20C09C82}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='프로모션발생건수'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='28'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[Parameters].[매개 변수 1]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D0F13D21-2BF8-49A7-9AA3-C9BE8B94BB1F}' />
+    </window>
+    <window class='worksheet' name='목표 달성률_이게진짜'>
+      <cards>
+        <edge name='left'>
+          <strip size='236'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='28'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[Parameters].[매개 변수 1]</field>
+            <field>[Parameters].[매개 변수 2]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2D4AEA61-EC90-4F6C-BB7F-76D4B48C390E}' />
+    </window>
+    <window class='worksheet' maximized='true' name='리워드금액별완료율'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:C_info_리워드경고문구(복사본)_1197396638904344:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:offer_type:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:ok]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:reward:ok]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:reward:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{0DF4A082-6CED-430C-A2BB-4D3E491261FD}' />
+    </window>
+    <window class='worksheet' name='최저금액별완료율'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:offer_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:C_info_리워드경고문구(복사본)_1197396638904344:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396574646279:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:offer_type:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:ok]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:promotion_reward:qk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:reward:ok]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:reward:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{DA5165BA-FEE3-4A5E-AB51-C305445DF9FA}' />
+    </window>
+    <window class='worksheet' name='전체 - 오퍼유형별 퍼널'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[:Measure Names]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{F47899D1-1DA0-46F0-A923-B139F1D68F49}' />
+    </window>
+    <window class='worksheet' name='오퍼유효기간별 퍼널'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='28'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396604854286:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396604903439:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396605014032:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1197396609257489:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:Calculation_1572879034650643:nk]</field>
+            <field>[federated.0b9b8uj0ibf767143nyjj1xy1m4o].[none:duration:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D2B88307-C87A-43AA-99DB-B49518EDCB2F}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='리워드금액별완료율' width='192'>
+      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
+      QtckAELXJABC1yQAQtckAELXJABC1yQAQtckAELXJABC1yQAQtckAELXJABC1yQAQtckAELX
+      JABC1yQAQtckAELXJABC1yQAQtckAELX5CZ5STAfN8lLhETejO5eyE3y5kiuCxS/VLwuEMhN
+      8oRICAmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNekFSgLpBYqP9ALNkfQC
+      xU96gYTQEQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNekFSgLpBYqP9ALN
+      kfQCxU96gYTQEQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DVphksC
+      aYaLjzTDzZE0w8VPmuGE0BEJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DXp
+      BUoC6QWKj/QCzZH0AsVPeoGE0BEJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQNQmA
+      0DXpBUoC6QWKj/QCzZH0AsVPeoGE0BEJgNA1CYDQNQmA0DUJgNA1CYDQNQmA0DUJgNA1CYDQ
+      NQmA0DUJgNC1mxos5tp0NN1Il2q9QNPNcHNt8kuU6XpSsa5UbIhLZF0zAZhrIxyAwWCY+ZVK
+      UrWu6YGfanWlYuMgJLYug5ZqH0NCLKA5xyromySqqPT394MWZWLCT09XB919gyQzUaGAj0hM
+      uV5XjIkJH1c72ujuG0hqXeGgn1BUYWCgH02LMTkZQFOidHX3JrEq8E1MoGoqAwODRMNBAqEQ
+      ne3tDI2OJ78uoL+/n1g0RCAYoaujlclAeF63M+cm68BoL83NYbqbr7BkcSkm7yJK8/Joa26m
+      ID8HU5Jm99BYP419k/S2XKFmaSUGVwHl+Xm0NrdRUJDL3Hf07k14YohPukbo72ihqqYKgzMH
+      tyHAwGSYRcWFSaoKrnU149fMXLnSRUVRBvmLFuGL2Sh0pyWtJoCh7hbGNAuXL7axuDQLd1Yu
+      EaOLfOv8fi9gzjOAw5vNWHc7JaVFNHcNkeWxc7W9hYLSiqQNfgBbegaT165SUlZCc3s/mR4X
+      If8ECpDML2BZXR4Cw70UlBTT3t6Lywb9Iz5846NEleQV5vF66Gy7SnFRNoO+KB5PNlkuuHCx
+      KWk1AbgzMum60kZpWT6942HsaggVhZaWjnndjumll156aS4/aLE50VSFmpWrMaJSlOOlt38E
+      DEY8nnSStb6zWB1oSozqlbWYtBiLirLp7R3EZLGSnZWJMUl1ma12iEWpWlmLUYtRVVlBUWEB
+      NqsVT7o7aQviNLeHmKKxZkUVURxkuy30D43gTs/A63EnpSYApyudmAq1y6uJGWxUVFXgG+jD
+      k52Hy2mft+3IIljoWuod8xJiAUkAhK5JAISuSQBEwqixCH29PfhDkdn/jKqiAcPDw7f9d02N
+      ca23h8lAKK5aQpPj+ELRW/4+NS8CI+4Lk0MdvPluA2YzbN9ajz8QwRidJGROJ9tlorOzB5vd
+      QnZxNcGBdqJWL82HPyC/fjtW/xjGWIDzzd3UrqqhqbGZ0vIKPA6F13/1LjabkZ07n+JSYytL
+      qkoxpaUxPDCK024m4h9j0K9RVZxFT+8wOXnpHHlvLxUPf4W6spybapQAiMTRNGKxKHn5xRw5
+      uI+ND36Js01DOGnhYszGmhI7o1oxZ08eJKp4cURbwOGhrLyEY3vO0dXRzsZVlXz44UGsmZXk
+      BIbxODwExgcwFlRz8P23iMRiDI6OogYnGIk5KfSayUu3c+xsI+HFhcQyarhy5AQ1VaXc+vkv
+      u0AigUwWG2s31POVHdspKV9MeUkZJmUMv+akMC+L7JxccnOyycwpxhQeIGR2UVNdSNMnrXi9
+      XopyvJy61EFZWSn5uVk4HQ4MRgsbHvoyi7wmCkrKySiqYt36OkaGJti42IU3r4Jr/YNkZWbh
+      zshl1bJqMp0Wmq8O4LjNWWQ5DyAW1Od1wn52GE79u4aqanfoBNXQVMBo4MZH++w27tR9KwEQ
+      uvb/ARjsccPTYMNvAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='목표 달성률_이게진짜' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='오퍼유효기간별 퍼널' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='전체 - 오퍼유형별 퍼널' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAEEklEQVR4nO3bz2pcZRzG8d97Jtia1qJWFy1dimvFOxA3uhEKIngH9R7cuPMGvApvwRtw
+      Y7Ei+KeCGhVb6kii1qSZ93UnA/2TST3Y2OfzWQ4zz5zJnO/kDCRtjDEKQk2P+gDgUdra5E69
+      96qqmqZ79/LbX/u13N/f+ElH71WtVWtt48f8l3u995paqzrJe/d5Lx7Hvd3b+3XuyVOz7a0f
+      30YBHGX34KB29n4/1gG0mU/YtL2TfMLOvffz7h914dyZ2fbWj88lENEEQDQBEE0ARBMA0QRA
+      NAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEE
+      QDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDR
+      BEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANG25hg5vVjU06ee
+      2Pj+fYxq1aq1OZ69qvdRrc28N7Waaa567zVN833WpO2ttvuxzq+jrB9fG2OMTR5QVbO9qNVq
+      Va21Wfemaaq2VsAnOzfr8xvLh9obo1dr872Bo/dqM54QaXs3l3v1/DNPzba3fnwuge5hjKoN
+      Phc236v59+Z04vdmHlyfEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0
+      ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRA
+      NAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEE
+      QDQBEE0ARBMA0QRANAEQTQBEEwDR2hhjHHWn3ntVVU3TPL2sVqtqrc26N01Ttdb+uW2Dl/Xg
+      vcWi2tF33XhvsVgc+3HXrv9U3/54667be++z/ezS97ZmWz1h1mN4mMe2f7lxv93jWO7+WT/8
+      srzr9v/TCXbS91wCEU0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEO2x/WtQeJAb
+      331R165e9RuARKO+//KzaguXQERq9cprl+vOrzsCINMYVZdefNl3AAKNw/row/erzjwnAAK1
+      rXrjnXfrm6+/EgCZzp6/WC+dv+g7ANkEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQT
+      ANEEQDQBEE0ARBMA0QRANAEQTQBE80/xRBpj1Orwjt8AhBoH9cGV1wVApjFu1/7htgDI1Nrp
+      evXNtwRApoO9ZZ298IIAyLRarer6px8LgEzbz16qt6+8JwCyCYBoAiCaAIgmAKIJgGgCIJoA
+      iCYAogmAaAIgmgCIJgCiCYBofwNCdQkzqXTKZAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='최저금액별완료율' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='프로모션발생건수' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+  <_.fcp.VizExtensions.true...referenced-extensions>
+    <_.fcp.VizExtensions.true...referenced-extension>
+      <manifest manifest-version='0.1'>
+        <worksheet-extension extension-version='1.5.0' id='com.tableau.extension.sankey'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>Sankeys show before-and-after states and relationships between two or more categories.</description>
+          <author email='github@tableau.com' name='Tableau' organization='Tableau' website='https://www.tableau.com/support' />
+          <min-api-version>1.12</min-api-version>
+          <source-location>
+            <url>https://extensions.tableauusercontent.com/sandbox/sankey/sankey.html</url>
+          </source-location>
+          <icon />
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+          <encoding id='level'>
+            <display-name resource-id='level-encoding'>Level</display-name>
+            <role-spec>
+              <role-type>discrete-dimension</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='5' />
+            <encoding-icon token='level' />
+            <tooltip resource-id='level-tooltip'>Sankey Level - Drag up to five dimensions here.</tooltip>
+          </encoding>
+          <encoding id='edge'>
+            <display-name resource-id='edge-encoding'>Link</display-name>
+            <role-spec>
+              <role-type>continuous-dimension</role-type>
+              <role-type>continuous-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='edge' />
+            <tooltip resource-id='edge-tooltip'>Link - Drag a measure here.</tooltip>
+          </encoding>
+        </worksheet-extension>
+        <resources>
+          <resource id='edge-encoding'>
+            <text locale='de_DE'>Verbindung</text>
+            <text locale='en_GB'>Link</text>
+            <text locale='en_US'>Link</text>
+            <text locale='es_ES'>Enlace</text>
+            <text locale='fr_CA'>Lien</text>
+            <text locale='fr_FR'>Lien</text>
+            <text locale='it_IT'>Flusso</text>
+            <text locale='ja_JP'>リンク</text>
+            <text locale='ko_KR'>링크</text>
+            <text locale='nl_NL'>Link</text>
+            <text locale='pt_BR'>Conexão</text>
+            <text locale='sv_SE'>länkar</text>
+            <text locale='th_TH'>ลิงก์</text>
+            <text locale='zh_CN'>链接</text>
+            <text locale='zh_TW'>鏈接</text>
+          </resource>
+          <resource id='edge-tooltip'>
+            <text locale='de_DE'>Verbindung - Kennzahl hierher ziehen.</text>
+            <text locale='en_GB'>Link - Drag a measure here.</text>
+            <text locale='en_US'>Link - Drag a measure here.</text>
+            <text locale='es_ES'>Enlace - Arrastre la medida aquí.</text>
+            <text locale='fr_CA'>Lien - Faites glisser la mesure ici.</text>
+            <text locale='fr_FR'>Lien - Faites glisser la mesure ici.</text>
+            <text locale='it_IT'>Flusso - Trascina la misura qui Link.</text>
+            <text locale='ja_JP'>リンク - メジャーを使用.</text>
+            <text locale='ko_KR'>링크 - 측정값 사용.</text>
+            <text locale='nl_NL'>Link - Sleep meetwaarde hierheen.</text>
+            <text locale='pt_BR'>Conexão - Arraste a medida aqui.</text>
+            <text locale='sv_SE'>Länk - Dra mått hit.</text>
+            <text locale='th_TH'>ลิงก์ - ใช้ค่าการวัด.</text>
+            <text locale='zh_CN'>链接 - 使用度量.</text>
+            <text locale='zh_TW'>鏈接 - 使用測量值.</text>
+          </resource>
+          <resource id='level-encoding'>
+            <text locale='de_DE'>Ebene</text>
+            <text locale='en_GB'>Level</text>
+            <text locale='en_US'>Level</text>
+            <text locale='es_ES'>Nivel</text>
+            <text locale='fr_CA'>Niveau</text>
+            <text locale='fr_FR'>Niveau</text>
+            <text locale='it_IT'>Livello</text>
+            <text locale='ja_JP'>レベル</text>
+            <text locale='ko_KR'>단계</text>
+            <text locale='nl_NL'>Niveau</text>
+            <text locale='pt_BR'>Nível</text>
+            <text locale='sv_SE'>Nivå</text>
+            <text locale='th_TH'>ระดับ</text>
+            <text locale='zh_CN'>级别</text>
+            <text locale='zh_TW'>級別</text>
+          </resource>
+          <resource id='level-tooltip'>
+            <text locale='de_DE'>Sankey-Ebene - Fügen Sie bis zu fünf Dimensionen hinzu.</text>
+            <text locale='en_GB'>Sankey Level - Drag up to five dimensions here.</text>
+            <text locale='en_US'>Sankey Level - Drag up to five dimensions here.</text>
+            <text locale='es_ES'>Nivel Sankey - Agregue hasta cinco dimensiones.</text>
+            <text locale='fr_CA'>Niveau Sankey - Ajoutez jusqu&apos;à cinq dimensions.</text>
+            <text locale='fr_FR'>Niveau Sankey - Ajoutez jusqu&apos;à cinq dimensions.</text>
+            <text locale='it_IT'>Livello Sankey - Aggiungi fino a cinque dimensioni.</text>
+            <text locale='ja_JP'>サンキーレベル - 最大5つのディメンションを追加.</text>
+            <text locale='ko_KR'>Sankey 레벨 - 최대 5개의 디멘션 추가.</text>
+            <text locale='nl_NL'>Sankey-niveau - Voeg maximaal vijf dimensies toe.</text>
+            <text locale='pt_BR'>Nível Sankey - Adicione até cinco dimensões.</text>
+            <text locale='sv_SE'>Sankey-nivå - Lägg till upp till fem dimensioner.</text>
+            <text locale='th_TH'>ระดับ Sankey - เพิ่มมิติสูงสุดห้ามิติ.</text>
+            <text locale='zh_CN'>桑基图級別 - 添加最多五个维度.</text>
+            <text locale='zh_TW'>桑基圖級別 - 新增最多五個維度.</text>
+          </resource>
+          <resource id='name'>
+            <text locale='en_US'>Sankey</text>
+            <text locale='ja_JP'>サンキー</text>
+            <text locale='zh_CN'>桑基图</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='오퍼유효기간별 퍼널' />
+      </referenced-views>
+    </_.fcp.VizExtensions.true...referenced-extension>
+  </_.fcp.VizExtensions.true...referenced-extensions>
+</workbook>
