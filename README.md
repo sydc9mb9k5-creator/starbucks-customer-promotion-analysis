@@ -33,27 +33,36 @@
 
 ## My Contribution
 
-저는 프로젝트에서 **데이터 전처리 및 프로모션 거래 매칭 로직 구현, Tableau 시각화 작업**에 참여했습니다.
+저는 프로젝트의 **주제 선정 및 분석 방향 설정, 데이터 전처리, Tableau 시각화, 최종 발표**에 참여했습니다.
 
-### 1. Data Preprocessing
+### 1. Project Topic & Problem Definition
 
-개인 전처리 노트북에서 다음 작업을 수행했습니다.
+- 프로젝트 **주제 선정 및 초기 분석 방향 설정에 참여**
+- 스타벅스의 프로모션 성과를 단순 비교하는 데 그치지 않고,
+  고객의 구매 행동과 프로모션 반응을 함께 분석하는 방향 설정에 기여
+- 고객을 RFM 기반으로 세분화하여
+  **고객군별 맞춤형 프로모션 전략을 제안하는 문제로 구체화**
+
+### 2. Data Preprocessing
+
+팀 전처리 과정에 참여했으며, 개인 작업에서는 다음과 같은 전처리 및 데이터 구조화 작업을 수행했습니다.
 
 - `portfolio`, `profile`, `transcript` 데이터 구조 확인 및 컬럼명 정리
 - 고객 데이터의 결측치 및 중복 데이터 처리
 - `value` 컬럼의 딕셔너리 구조를 파싱하여 `amount`, `offer_id`, `reward` 변수 생성
 - 프로모션 채널을 web / email / mobile / social 이진 변수로 변환
-- 거래 금액 로그 변환 후 IQR과 Z-score를 함께 활용한 이상치 처리
+- 거래 금액 로그 변환 후 IQR과 Z-score를 활용한 이상치 처리
 - 거래(transaction)에 프로모션 `offer_id`를 연결하는 매칭 로직 구현
-- 프로모션 완료 시점과 유효기간을 고려하여 구매를  
+- 프로모션 완료 시점과 유효기간을 고려하여 구매를
   **direct / indirect / organic** 유형으로 구분
 - 고객 정보와 프로모션·거래 데이터를 결합하여 분석용 데이터셋 생성
 
+> 팀 전처리 과정은 `notebooks/data_preprocessing.ipynb`,  
 > 개인 작업 과정은 `notebooks/jaehee_preprocessing.ipynb`에서 확인할 수 있습니다.
 
-### 2. Tableau Visualization
+### 3. Tableau Visualization
 
-프로모션 성과와 RFM 고객 세그먼트를 비교할 수 있도록  
+프로모션 성과와 RFM 고객 세그먼트를 비교할 수 있도록
 Tableau 기반 시각화 작업에 참여했습니다.
 
 프로젝트에서는 다음 세 가지 관점의 대시보드를 구성했습니다.
@@ -61,6 +70,12 @@ Tableau 기반 시각화 작업에 참여했습니다.
 - 프로모션 현황
 - RFM 매출 분석
 - RFM 상세 현황 및 퍼널
+
+### 4. Project Presentation
+
+- 프로젝트의 문제 정의부터 주요 분석 결과, 고객 세그먼트별 전략 제안까지
+  **최종 프로젝트 발표를 담당**
+- 데이터 분석 결과를 비즈니스 관점의 프로모션 전략으로 연결해 전달
 
 ---
 
@@ -191,20 +206,24 @@ VIP와 충성고객이 전체 고객의 핵심 비중을 차지하며,
 
 ### Dashboard 1 — Promotion Overview
 
-프로모션 유형, 최소 구매 조건, 유효기간 등에 따른  
+프로모션 유형, 최소 구매 조건, 유효기간 등에 따른
 성과 및 완료율을 비교합니다.
+
+![Promotion Overview Dashboard](images/dashboard-1.png)
 
 ### Dashboard 2 — RFM Revenue Analysis
 
-RFM 고객군별 매출 기여도와  
+RFM 고객군별 매출 기여도와
 효율이 높은 프로모션을 비교합니다.
+
+![RFM Revenue Analysis Dashboard](images/dashboard-2.png)
 
 ### Dashboard 3 — RFM Detail & Funnel
 
-프로모션 수신부터 완료까지의 퍼널을 통해  
+프로모션 수신부터 완료까지의 퍼널을 통해
 고객군별 전환율과 이탈률을 확인합니다.
 
-> 대시보드 이미지는 `images/` 폴더에 추가할 예정입니다.
+![RFM Detail and Funnel Dashboard](images/dashboard-3.png)
 
 ---
 
@@ -270,7 +289,7 @@ VIP 등급으로의 상향과 방문 습관 형성을 목표로 했습니다.
 
 ### `images/`
 
-README에 사용할 Tableau 대시보드 이미지를 저장하는 폴더입니다.
+README에 사용한 Tableau 대시보드 이미지를 저장한 폴더입니다.
 
 ---
 
@@ -309,7 +328,9 @@ starbucks-customer-promotion-analysis/
 │   └── starbucks_promotion.twb
 │
 └── images/
-    └── .gitkeep
+    ├── dashboard-1.png
+    ├── dashboard-2.png
+    └── dashboard-3.png
 ```
 
 ---
@@ -321,5 +342,5 @@ starbucks-customer-promotion-analysis/
 - Data Analysis 10th Cohort
 
 > This repository contains the analysis files used in the team project.  
-> My primary work in the repository includes data preprocessing, transaction–offer matching,  
-> promotion purchase classification, and Tableau visualization.
+> My primary contributions include project topic definition, data preprocessing,  
+> transaction–offer matching, Tableau visualization, and the final project presentation.
